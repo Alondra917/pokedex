@@ -1,0 +1,22 @@
+import { useEffect, useState } from "react";
+
+export function ModoOscuro() {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    // Si ya tenía una preferencia guardada, la usa
+    return (localStorage.getItem("theme") as "light" | "dark") || "light";
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+
+  return { theme, toggleTheme };
+}
