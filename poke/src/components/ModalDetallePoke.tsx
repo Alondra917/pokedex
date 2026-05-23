@@ -16,7 +16,7 @@ export default function ModalDetallePoke({ pokemon, onClose }: PokemonDetailModa
       className="fixed inset-0 bg-black/70 z-50 flex justify-end backdrop-blur-xs transition-opacity animate-in fade-in duration-200" 
       onClick={onClose}
     >
-      {/*  EL CONTENEDOR PRINCIPAL */}
+      {/*  CONTENEDOR PRINCIPAL */}
       <div 
         className="w-full max-w-md bg-card text-card-foreground h-full p-6 shadow-2xl overflow-y-auto space-y-6 animate-in slide-in-from-right duration-300 flex flex-col justify-between border-l border-border" 
         onClick={e => e.stopPropagation()}
@@ -25,7 +25,7 @@ export default function ModalDetallePoke({ pokemon, onClose }: PokemonDetailModa
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <span className="text-sm font-mono text-muted-foreground bg-muted px-2.5 py-1 rounded-md">
-              #{String(pokemon.id).padStart(3, '0')}
+              {String(pokemon.id).padStart(1, '0')}
             </span>
             <Button variant="ghost" size="sm" onClick={onClose} className="cursor-pointer hover:bg-muted text-foreground rounded-full">
               Cerrar ✕
@@ -98,7 +98,7 @@ export default function ModalDetallePoke({ pokemon, onClose }: PokemonDetailModa
         </div>
 
         <footer className="text-center pt-4 border-t border-border">
-          <p className="text-[10px] text-muted-foreground font-mono">Pokédex Indexing System V4</p>
+          <p className="text-[10px] text-muted-foreground font-mono">Pokedex</p>
         </footer>
 
       </div>

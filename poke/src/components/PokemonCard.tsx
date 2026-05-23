@@ -58,7 +58,7 @@ export default function PokemonCard({ pokemon, onSelect, isFavorite, onToggleFav
       {/* ID y Nombre */}
       <div className="space-y-1 w-full">
         <span className="text-[10px] font-mono text-muted-foreground block">
-          #{String(pokemon.id).padStart(3, "0")}
+          {String(pokemon.id).padStart(1, "0")}
         </span>
         <h3 className="font-extrabold capitalize text-sm tracking-tight text-foreground group-hover:text-primary transition-colors">
           {pokemon.name}
