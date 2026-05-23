@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-# pokedex
-=======
-# React + TypeScript + Vite
+# pokedex en la otra rama :)
+
 
